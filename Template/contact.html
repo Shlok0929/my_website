@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,11 +8,12 @@
   <link rel="stylesheet" href="../Style/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body>
   <div class="header">
     <div class="header-content">
       <a href="./index.html" class="logo">
-            AIRGO
+        AIRGO
       </a>
       <nav class="navbar">
         <ul>
@@ -24,33 +26,33 @@
       </nav>
     </div>
   </div>
-   <div class="main-body">
-   <main class="contact-section">
-    <div class="contact-left">
-      <h4>CONTACT US</h4>
-      <p class="contact-info">
-        <span>📞</span> +44 07777760223
-      </p>
-      <p class="contact-info">
-        <span>📧</span> Airgo.LTD@gmail.com
-      </p>
-    </div>
+  <div class="main-body">
+    <main class="contact-section">
+      <div class="contact-left">
+        <h4>CONTACT US</h4>
+        <p class="contact-info">
+          <span>📞</span> +44 07777760223
+        </p>
+        <p class="contact-info">
+          <span>📧</span> Airgo.LTD@gmail.com
+        </p>
+      </div>
 
-    <div class="contact-right">
-      <h2>Let’s connect.</h2>
-      <p>Ready to take your deliveries sky-high?</p>
+      <div class="contact-right">
+        <h2>Let’s connect.</h2>
+        <p>Ready to take your deliveries sky-high?</p>
 
-      <form>
-        <div class="form-group">
-          <input type="text" id="first-name" placeholder="FIRST NAME" required />
-          <input type="text" id="last-name" placeholder="LAST NAME" required />
-        </div>
-        <input type="email" id="email" placeholder="EMAIL" required />
-        <button type="submit">SUBMIT</button>
-      </form>
-    </div>
-   </main>
-   </div>
+        <form>
+          <div class="form-group">
+            <input type="text" id="first-name" placeholder="FIRST NAME" required />
+            <input type="text" id="last-name" placeholder="LAST NAME" required />
+          </div>
+          <input type="email" id="email" placeholder="EMAIL" required />
+          <button type="submit">SUBMIT</button>
+        </form>
+      </div>
+    </main>
+  </div>
   <div class="footer">
     <div class="socials">
       <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
@@ -61,6 +63,13 @@
       <p>Copyright © 2025 Air Go — All rights reserved.</p>
     </div>
   </div>
-  <script src="./transition.js" defer></script>
+  <script>
+    const hamburger = document.getElementById('hamburger-btn');
+    const navbarMenu = document.getElementById('navbar-menu');
+    hamburger.addEventListener('click', () => {
+      navbarMenu.classList.toggle('active');
+    });
+  </script>
 </body>
+
 </html>

@@ -10,10 +10,11 @@
 <body>
   <div class="header">
     <div class="header-content">
-      <a href="./index.html" class="logo">
-            AIRGO
-      </a>
-      <nav class="navbar">
+      <a href="./index.html" class="logo">AIRGO</a>
+      <button class="hamburger" id="hamburger-btn" aria-label="Open menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="navbar" id="navbar-menu">
         <ul>
           <li><a href="./index.html">Home</a></li>
           <li><a href="./content-01.html">Content</a></li>
@@ -53,5 +54,12 @@
       <p>Copyright © 2025 Air Go — All rights reserved.</p>
     </div>
   </div>
+  <script>
+  const hamburger = document.getElementById('hamburger-btn');
+  const navbarMenu = document.getElementById('navbar-menu');
+  hamburger.addEventListener('click', () => {
+    navbarMenu.classList.toggle('active');
+  });
+</script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,30 +8,32 @@
   <link rel="stylesheet" href="../Style/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body>
   <div class="header">
     <div class="header-content">
-      <a href="./index.html" class="logo">
-            AIRGO
-      </a>
-      <nav class="navbar">
+      <a href="./index.html" class="logo">AIRGO</a>
+      <button class="hamburger" id="hamburger-btn" aria-label="Open menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="navbar" id="navbar-menu">
         <ul>
           <li><a href="./index.html">Home</a></li>
           <li><a href="./content-01.html">Content</a></li>
           <li><a href="./about.html">About Us</a></li>
           <li><a href="./contact.html">Contact Us</a></li>
-          <li><a href="./reference.html">References</a></li>
+          <li><a href="./reference.html" style="color: black;">References</a></li>
         </ul>
       </nav>
     </div>
   </div>
 
   <div class="main-body-ref">
-     <p>
-       Wing (2023). Wing. [online] Wing. Available at: https://wing.com/.<br>
-       The Noun Project (2024).Noun Project. [online] Noun Project. Available at: https://<br>
-       thenounproject.com.
-‌    </p>           
+    <p>
+      Wing (2023). Wing. [online] Wing. Available at: https://wing.com/.<br>
+      The Noun Project (2024).Noun Project. [online] Noun Project. Available at: https://<br>
+      thenounproject.com.
+      ‌ </p>
   </div>
 
   <div class="footer">
@@ -43,5 +46,26 @@
       <p>Copyright © 2025 Air Go — All rights reserved.</p>
     </div>
   </div>
+  <script>
+    const hamburger = document.getElementById('hamburger-btn');
+    const navbarMenu = document.getElementById('navbar-menu');
+    const hamburgerIcon = hamburger.querySelector('i');
+
+    hamburger.addEventListener('click', () => {
+      navbarMenu.classList.toggle('active');
+      hamburger.classList.toggle('open'); // NEW: add class to button
+
+      if (hamburger.classList.contains('open')) {
+        hamburgerIcon.classList.remove('fa-bars');
+        hamburgerIcon.classList.add('fa-times');
+      } else {
+        hamburgerIcon.classList.remove('fa-times');
+        hamburgerIcon.classList.add('fa-bars');
+      }
+
+
+    });
+  </script>
 </body>
+
 </html>

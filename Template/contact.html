@@ -12,20 +12,22 @@
 <body>
   <div class="header">
     <div class="header-content">
-      <a href="./index.html" class="logo">
-        AIRGO
-      </a>
-      <nav class="navbar">
+      <a href="./index.html" class="logo">AIRGO</a>
+      <button class="hamburger" id="hamburger-btn" aria-label="Open menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="navbar" id="navbar-menu">
         <ul>
           <li><a href="./index.html">Home</a></li>
           <li><a href="./content-01.html">Content</a></li>
           <li><a href="./about.html">About Us</a></li>
-          <li><a href="./contact.html">Contact Us</a></li>
+          <li><a href="./contact.html" style="color: black;">Contact Us</a></li>
           <li><a href="./reference.html">References</a></li>
         </ul>
       </nav>
     </div>
   </div>
+
   <div class="main-body">
     <main class="contact-section">
       <div class="contact-left">
@@ -47,8 +49,8 @@
             <input type="text" id="first-name" placeholder="FIRST NAME" required />
             <input type="text" id="last-name" placeholder="LAST NAME" required />
           </div>
-          <input type="email" id="email" placeholder="EMAIL" required />
-          <button type="submit">SUBMIT</button>
+          <div class="email"><input type="email" id="email" placeholder="EMAIL" required /></div>
+          <div class="submit"><button type="submit">SUBMIT</button></div>
         </form>
       </div>
     </main>
@@ -66,8 +68,21 @@
   <script>
     const hamburger = document.getElementById('hamburger-btn');
     const navbarMenu = document.getElementById('navbar-menu');
+    const hamburgerIcon = hamburger.querySelector('i');
+
     hamburger.addEventListener('click', () => {
       navbarMenu.classList.toggle('active');
+      hamburger.classList.toggle('open'); // NEW: add class to button
+
+      if (hamburger.classList.contains('open')) {
+        hamburgerIcon.classList.remove('fa-bars');
+        hamburgerIcon.classList.add('fa-times');
+      } else {
+        hamburgerIcon.classList.remove('fa-times');
+        hamburgerIcon.classList.add('fa-bars');
+      }
+
+
     });
   </script>
 </body>

@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Airgo</title>
   <link rel="stylesheet" href="../Style/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
- 
+
 </head>
+
 <body>
   <div class="header">
     <div class="header-content">
-      <a href="./index.html" class="logo">
-            AIRGO
-      </a>
-      <nav class="navbar">
+      <a href="./index.html" class="logo">AIRGO</a>
+      <button class="hamburger" id="hamburger-btn" aria-label="Open menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="navbar" id="navbar-menu">
         <ul>
           <li><a href="./index.html">Home</a></li>
-          <li><a href="./content-01.html">Content</a></li>
+          <li><a href="./content-01.html" style="color: black;">Content</a></li>
           <li><a href="./about.html">About Us</a></li>
           <li><a href="./contact.html">Contact Us</a></li>
           <li><a href="./reference.html">References</a></li>
@@ -26,75 +29,79 @@
     </div>
   </div>
 
-<div class="main-body">
+  <div class="main-body">
     <div class="how-it-works">
-         <div class="top-line"></div>
-         <h2>HOW IT WORK!</h2>
+      <div class="top-line"></div>
+      <h2>HOW IT WORK!</h2>
 
       <div class="steps">
-          <div class="step">
-            <img src="../Images/Shop.png" alt="Shop illustration">
-            <h3>SHOP</h3>
-          </div>
-
-        <div class="arrow">
-            <span>→</span>
-         </div>
-
         <div class="step">
-            <img src="../Images/Location.png" alt="Pick your delivery spot illustration">
-            <h3>PICK YOUR DELIVERY SPOT</h3>
-            </div>
-
-        <div class="arrow">
-            <span>→</span>
+          <img src="../Images/Shop.png" alt="Shop illustration">
+          <h3>SHOP</h3>
         </div>
 
-         <div class="step">
-            <img src="../Images/Final.png" alt="Get drone delivery illustration">
-            <h3>GET DRONE DELIVERY</h3>
-          </div>
+        <div class="arrow">
+          <span>→</span>
+        </div>
+
+        <div class="step">
+          <img src="../Images/Location.png" alt="Pick your delivery spot illustration">
+          <h3>PICK YOUR DELIVERY SPOT</h3>
+        </div>
+
+        <div class="arrow">
+          <span>→</span>
+        </div>
+
+        <div class="step">
+          <img src="../Images/Final.png" alt="Get drone delivery illustration">
+          <h3>GET DRONE DELIVERY</h3>
+        </div>
       </div>
 
       <div class="content-text">
-      
-          <div class="drone-info-container">
-        
-            <div class="left-section">
-              <div class="left1">
-                <h3 class="left-tital">Fast & Reliable Deliveries</h3>
-                <hr>
-                <p>We have drones that can deliver packages in a couple of minutes. AirGo has smart route optimization that makes it possible to deliver your orders to the destination in a fast and safe manner.</p>
-              </div>
-             <div class="left2">
-                <h3 class="left-tital">Eco-Friendly Operations</h3>
-                <hr>
-                <p>AirGo is fully electric and therefore they emit less pollution and carbon emissions as compared to the conventional delivery vehicles. Our mission is to ensure that logistics is green and clean.</p>
-              </div>
+
+        <div class="drone-info-container">
+
+          <div class="left-section">
+            <div class="left1">
+              <h3 class="left-tital">Fast & Reliable Deliveries</h3>
+              <hr>
+              <p>We have drones that can deliver packages in a couple of minutes. AirGo has smart route optimization
+                that makes it possible to deliver your orders to the destination in a fast and safe manner.</p>
             </div>
-
-
-  <div class="center-image">
-    <img src="../Images\BG IMAGE.png" alt="Image">
-  </div>
-
-
-            <div class="right-section">
-                <div class="Right1">
-                 <h3 class="right-tital">Smart Navigation System</h3>
-                 <hr>
-                <p>AirGo drones, with their GPS and obstacle detection, will be able to operate during various weather conditions and evade buildings and trees along with other obstacles autonomously.</p>
-            </div>
-              <div class="Right2">
-                <h3 class="right-tital">Safety & Security</h3>
-                <hr>
-                 <p>Every drone has a lock package and tracking sensors to aid delivery of items safely to the appropriate destination.</p>
-              </div>
+            <div class="left2">
+              <h3 class="left-tital">Eco-Friendly Operations</h3>
+              <hr>
+              <p>AirGo is fully electric and therefore they emit less pollution and carbon emissions as compared to the
+                conventional delivery vehicles. Our mission is to ensure that logistics is green and clean.</p>
             </div>
           </div>
-       </div>
+
+
+          <div class="center-image">
+            <img src="../Images/BGIMAGE.png" alt="Image">
+          </div>
+
+
+          <div class="right-section">
+            <div class="Right1">
+              <h3 class="right-tital">Smart Navigation System</h3>
+              <hr>
+              <p>AirGo drones, with their GPS and obstacle detection, will be able to operate during various weather
+                conditions and evade buildings and trees along with other obstacles autonomously.</p>
+            </div>
+            <div class="Right2">
+              <h3 class="right-tital">Safety & Security</h3>
+              <hr>
+              <p>Every drone has a lock package and tracking sensors to aid delivery of items safely to the appropriate
+                destination.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
 
   <div class="footer">
     <div class="socials">
@@ -106,5 +113,24 @@
       <p>Copyright © 2025 Air Go — All rights reserved.</p>
     </div>
   </div>
+  <script>
+    const hamburger = document.getElementById('hamburger-btn');
+    const navbarMenu = document.getElementById('navbar-menu');
+    const hamburgerIcon = hamburger.querySelector('i');
+
+    hamburger.addEventListener('click', () => {
+      navbarMenu.classList.toggle('active');
+      hamburger.classList.toggle('open'); // NEW: add class to button
+
+      if (hamburger.classList.contains('open')) {
+        hamburgerIcon.classList.remove('fa-bars');
+        hamburgerIcon.classList.add('fa-times');
+      } else {
+        hamburgerIcon.classList.remove('fa-times');
+        hamburgerIcon.classList.add('fa-bars');
+      }
+    });
+  </script>
 </body>
+
 </html>

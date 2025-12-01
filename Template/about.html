@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="../Style/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body>
   <div class="header">
     <div class="header-content">
@@ -18,7 +20,7 @@
         <ul>
           <li><a href="./index.html">Home</a></li>
           <li><a href="./content-01.html">Content</a></li>
-          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./about.html" style="color: black;">About Us</a></li>
           <li><a href="./contact.html">Contact Us</a></li>
           <li><a href="./reference.html">References</a></li>
         </ul>
@@ -27,23 +29,27 @@
   </div>
 
   <section class="about">
-        <div class="about-text">
-          <p>AirGo is a progressive drone delivery business that will focus on ensuring that people can access fast, safe, and environmentally friendly delivery. Our mission is to transform the process of delivery of packages, groceries, and other necessities to people – using autonomous aerial technology.</p>
-        </div>
+    <div class="about-text">
+      <p>AirGo is a progressive drone delivery business that will focus on ensuring that people can access fast, safe,
+        and environmentally friendly delivery. Our mission is to transform the process of delivery of packages,
+        groceries, and other necessities to people – using autonomous aerial technology.</p>
+    </div>
 
-        <div class="mission-vision">
-          <div class="mission">
-            <h3>Our Mission</h3>
-            <p>To enhance the logistics of delivery by the use of innovative drone technology, to make it easy, fast, and sustainable to the communities all around the globe.</p>
-          </div>
+    <div class="mission-vision">
+      <div class="mission">
+        <h3>Our Mission</h3>
+        <p>To enhance the logistics of delivery by the use of innovative drone technology, to make it easy, fast, and
+          sustainable to the communities all around the globe.</p>
+      </div>
 
-          <div class="vision">
-            <h3>Our Vision</h3>
-            <p>Imagine a day when all deliveries are airborne, there is no traffic jam, carbon emission is minimized and you are a happy person as your door is opened in minutes.</p>
-          </div>
-        </div>
-   </section>
-    
+      <div class="vision">
+        <h3>Our Vision</h3>
+        <p>Imagine a day when all deliveries are airborne, there is no traffic jam, carbon emission is minimized and you
+          are a happy person as your door is opened in minutes.</p>
+      </div>
+    </div>
+  </section>
+
   <div class="footer">
     <div class="socials">
       <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
@@ -55,11 +61,25 @@
     </div>
   </div>
   <script>
-  const hamburger = document.getElementById('hamburger-btn');
-  const navbarMenu = document.getElementById('navbar-menu');
-  hamburger.addEventListener('click', () => {
-    navbarMenu.classList.toggle('active');
-  });
-</script>
+    const hamburger = document.getElementById('hamburger-btn');
+    const navbarMenu = document.getElementById('navbar-menu');
+    const hamburgerIcon = hamburger.querySelector('i');
+
+    hamburger.addEventListener('click', () => {
+      navbarMenu.classList.toggle('active');
+      hamburger.classList.toggle('open'); // NEW: add class to button
+
+      if (hamburger.classList.contains('open')) {
+        hamburgerIcon.classList.remove('fa-bars');
+        hamburgerIcon.classList.add('fa-times');
+      } else {
+        hamburgerIcon.classList.remove('fa-times');
+        hamburgerIcon.classList.add('fa-bars');
+      }
+
+
+    });
+  </script>
 </body>
+
 </html>

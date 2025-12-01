@@ -121,6 +121,7 @@ body {
 
 .body-left button {
   margin-top: 40px;
+  margin-left: 300px;
   background-color: #344E41;
   color: white;
   border: none;
@@ -362,7 +363,7 @@ button:hover {
   transform: translateX(-50%);
   font-size: 19px;
   letter-spacing: 1px;
-  color: #5E7055;
+  color: #344e41;
   margin-top: 30px;
 }
 
@@ -398,7 +399,7 @@ button:hover {
 }
 
 .step:hover {
-  transform: scale(1.03);
+  transform: scale(1.09);
 }
 
 .step img {
@@ -463,7 +464,9 @@ button:hover {
 
 .right-section h3 {
   font-weight: 600;
-  color: #fff;
+  background: linear-gradient(to right, #344E41, #588157);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 25px;
   text-align: right;
 }
@@ -478,7 +481,9 @@ button:hover {
 
 .left-section h3 {
   font-weight: 600;
-  color: #fff;
+    background: linear-gradient(to right, #344E41, #588157);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 25px;
   text-align: left;
 }
@@ -490,7 +495,7 @@ button:hover {
 .right-section hr {
   border: 0;
   height: 2px;
-  background: #fff;
+  background: linear-gradient(to right, #344E41, #588157);
   margin: 5px 0 10px 0;
   width: 100%;
   text-align: right;
@@ -500,7 +505,7 @@ button:hover {
 .left-section hr {
   border: 0;
   height: 2px;
-  background: #fff;
+  background: linear-gradient(to right, #344E41, #588157);
   margin: 5px 0 10px 0;
   width: 100%;
   margin-right: auto;
@@ -510,7 +515,9 @@ button:hover {
   margin-top: 25px;
   font-size: 20px;
   line-height: 1;
-  color: #ffffff;
+  background: linear-gradient(to right, #344E41, #588157);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 600;
   text-align: left;
 }
@@ -519,7 +526,9 @@ button:hover {
   margin-top: 25px;
   font-size: 20px;
   line-height: 1;
-  color: #ffffff;
+  background: linear-gradient(to right, #344E41, #588157);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 600;
   text-align: left;
 }
@@ -914,6 +923,7 @@ button:hover {
   .step:hover {
     transform: scale(1.1);
   }
+  
 
   .arrow span {
     display: inline-block;
